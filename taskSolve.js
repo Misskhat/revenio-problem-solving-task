@@ -3,7 +3,10 @@
 
 function primeNumberChecker(n) {
   //n is a number or not vValidation check
-  if (n !== "number") console.log("Please provide a number");
+  if (typeof n !== "number") {
+    console.log("Please provide a number");
+    return;
+  }
 
   //prime number logic:
   if (n % n === 0 && n % 2 !== 0) {
@@ -38,4 +41,21 @@ function largeElementInArray(arr) {
     }
   }
   console.log(largeNumber);
+}
+
+// Problem: 3
+// Reverse a String: Given the string "algorithm", explain how you would reverse it without using built-in reverse functions. Input: "algorithm" Output: "mhtirogla"
+
+function reverseString(str) {
+  if (typeof str !== "string") {
+    console.log("Please provide a string");
+    return;
+  }
+
+  //reverse string logic:
+  let result = "";
+  for (const s of str) {
+    result = s + result;
+  }
+  console.log(result);
 }
