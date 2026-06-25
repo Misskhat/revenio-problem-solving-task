@@ -129,3 +129,41 @@ function swapNumber(a, b) {
   [a, b] = [b, a];
   console.log(`a = ${a}, b = ${b}`);
 }
+
+// Problem: 8
+// Count Vowels in a String: Given the string "Programming", explain how you would count the vowels. Input: "Programming" Output: 3
+
+/**
+ * step by step breakdown the logic of find out the vowel count.
+ * 1. Create a function (I'will name the function vowelCount)
+ * 2. Take a parameter in function params (as like "str")
+ * 3. If you need validation then check the type check
+ * 4. Assign 2 variable one for param lowercase and another for vowel included
+ * 5. loop through the string and inside loop check the alphabet is it vowel or not
+ * 6. if vowel then push the vowel included variable
+ * 7. an after the loop end check the vowel array length and your get the result.
+ */
+function vowelCount(str) {
+  //validation check
+  if (typeof str !== "string") {
+    console.log("Please provide a string value");
+    return;
+  }
+
+  //vowel count logic:
+  const strLowerCase = str.toLowerCase();
+  let strCountVowel = [];
+  for (const element of str) {
+    // console.log(element);
+    if (
+      element == "a" ||
+      element == "e" ||
+      element == "i" ||
+      element == "o" ||
+      element == "u"
+    ) {
+      strCountVowel.push(element);
+    }
+  }
+  console.log(strCountVowel.length);
+}
