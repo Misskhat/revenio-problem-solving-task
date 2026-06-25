@@ -79,3 +79,20 @@ function palindromeCheck(str) {
     console.log("Not Palindrome");
   }
 }
+
+// Problem: 5
+// Factorial Calculation: Given a number 5, explain how you would calculate its factorial. Input: 5 Output: 120
+function factorialCalculation(number) {
+  //validation check
+  if (typeof number !== "number") {
+    console.log("Please provide the number");
+    return;
+  }
+
+  //factorial calculation logic:
+  let factor = 1;
+  for (let i = 1; i <= number; i++) {
+    factor = factor * i;
+  }
+  console.log(factor);
+}
