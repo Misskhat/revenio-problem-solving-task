@@ -1,8 +1,6 @@
 // Problem: 1
 // Prime Number Check: Given a number 29, explain how you would determine whether it is a prime number or not. Input: 29 Output: Prime Number
 
-const e = require("cors");
-
 function primeNumberChecker(n) {
   //n is a number or not vValidation check
   if (typeof n !== "number") {
@@ -166,4 +164,18 @@ function vowelCount(str) {
     }
   }
   console.log(strCountVowel.length);
+}
+
+// Problem: 9
+// Find Second Largest Element: Given an array [10, 50, 30, 80, 70], explain how you would find the second largest element. Input: [10, 50, 30, 80, 70] Output: 70
+
+function secondLargeElement(arr) {
+  const decendingArray = [];
+  for (const element of arr) {
+    if (!decendingArray.includes(element)) {
+      decendingArray.push(element);
+    }
+  }
+  decendingArray.sort((a, b) => b - a);
+  console.log(decendingArray[1]);
 }
