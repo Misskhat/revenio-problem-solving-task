@@ -121,3 +121,11 @@ function findDuplicateElements(arr) {
   }
   console.log(duplicateArray);
 }
+
+// Problem: 7
+// Swap Two Numbers Without a Third Variable: Given two numbers, 10 and 20, explain how you would swap them without using another variable. Input: a = 10, b = 20, Output: a = 20, b = 10
+
+function swapNumber(a, b) {
+  [a, b] = [b, a];
+  console.log(`a = ${a}, b = ${b}`);
+}
