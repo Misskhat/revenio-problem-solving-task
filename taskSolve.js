@@ -179,3 +179,16 @@ function secondLargeElement(arr) {
   decendingArray.sort((a, b) => b - a);
   console.log(decendingArray[1]);
 }
+
+// Problem: 10
+// Remove Duplicates from Array: Given an array [1, 2, 2, 3, 4, 4, 5], explain how you would remove duplicate values. Input: [1, 2, 2, 3, 4, 4, 5] Output: [1, 2, 3, 4, 5]
+
+function removeDuplicate(arr) {
+  const afterRemoveDuplicate = [];
+  for (const element of arr) {
+    if (!afterRemoveDuplicate.includes(element)) {
+      afterRemoveDuplicate.push(element);
+    }
+  }
+  console.log(afterRemoveDuplicate);
+}
