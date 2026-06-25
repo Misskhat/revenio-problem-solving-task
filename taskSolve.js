@@ -59,3 +59,23 @@ function reverseString(str) {
   }
   console.log(result);
 }
+
+// Problem: 4
+// Palindrome Check: Given the string "madam", explain how you would check whether it is a palindrome. Input: "madam" Output: Palindrome
+
+function palindromeCheck(str) {
+  //validation check.
+  if (typeof str !== "string") {
+    console.log("Please provide the string word.");
+    return;
+  }
+
+  //palindrome string logic.
+  const strLowerCase = str.toLowerCase();
+  const reverseStrLowerCase = strLowerCase.split("").reverse().join("");
+  if (strLowerCase === reverseStrLowerCase) {
+    console.log("Palindrome");
+  } else {
+    console.log("Not Palindrome");
+  }
+}
