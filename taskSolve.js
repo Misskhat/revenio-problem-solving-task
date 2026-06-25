@@ -1,6 +1,8 @@
 // Problem: 1
 // Prime Number Check: Given a number 29, explain how you would determine whether it is a prime number or not. Input: 29 Output: Prime Number
 
+const e = require("cors");
+
 function primeNumberChecker(n) {
   //n is a number or not vValidation check
   if (typeof n !== "number") {
@@ -95,4 +97,27 @@ function factorialCalculation(number) {
     factor = factor * i;
   }
   console.log(factor);
+}
+
+//Problem: 6
+// Find Duplicate Elements: Given an array [1, 3, 5, 3, 7, 1], explain how you would identify duplicate elements. Input: [1, 3, 5, 3, 7, 1] Output: [1, 3]
+
+function findDuplicateElements(arr) {
+  //validation check
+  if (!Array.isArray(arr)) {
+    console.log("Please provide an array");
+    return;
+  }
+
+  //duplicate elements found logic.
+  const duplicateArray = [];
+  const uniqArray = [];
+  for (const element of arr) {
+    if (!uniqArray.includes(element)) {
+      uniqArray.push(element);
+    } else {
+      duplicateArray.push(element);
+    }
+  }
+  console.log(duplicateArray);
 }
